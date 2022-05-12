@@ -4,9 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel src/index.html",
+    "lint": "eslint --ignore-path ./.gitignore --fix \"./**/*.{js,ts}\"",
+    "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\"",
+    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
+    "format:check": "prettier --ignore-path ./.gitignore --check \"./**/*.{html,json,js,ts,css}\"",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.0.3",
+    "parcel": "^2.5.0",
+    "prettier": "^2.6.2"
+  }
 }
